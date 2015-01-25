@@ -1,5 +1,6 @@
 #!/bin/bash
-set -ex
+
+set -x
 
 # This script installs the dotfiles repository to the user's home directory.
 
@@ -11,10 +12,10 @@ sed -i -e 's/HISTFILESIZE=.*$/HISTFILESIZE=-1/' $HOME/.bashrc
 grep HISTTIMEFORMAT $HOME/.bashrc
 if [ $? -ne 0 ]; then
     # Add the history time format to the end of the .bashrc
-    echo HISTTIMEFORMAT=\"%F %r \" >> $HOME/.bashrc
+    echo -e HISTTIMEFORMAT=\"%F %r \" >> $HOME/.bashrc
 else
     # Replace the history time format in the user's .bashrc
-    sed -i -e 's/HISTTIMEFORMAT=.*&/HISTTIMEFORMAT=\"%F %r \"' $HOME/.bashrc
+    sed -i -e 's/HISTTIMEFORMAT=.*&/HISTTIMEFORMAT=\"%F %r \"/' $HOME/.bashrc
 fi
 
 # Copy the .vimrc to the users home file.
