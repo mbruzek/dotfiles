@@ -3,11 +3,11 @@
 # Install and remove packages on a 15.04 Ubuntu system.
 # This script was written on 02/02/2015.
 
-set -ex
+set -x
 
 # Create an alphabetical list of packages to install.
 install_packages=(\
-amulet \
+#amulet \
 arj \
 build-essential \
 byobu \
@@ -43,6 +43,7 @@ python3-flake8 \
 python3-requests \
 python3-setuptools \
 python-dev \
+python-pip \
 python-virtualenv \
 qemu-kvm \
 qemu-system \
@@ -63,10 +64,10 @@ zip \
 )
 
 # Create an alphabetical list of python packages to install.
-pip_install=(bundletester jujudb-inspect juju-deployer)
+pip_install=(bundletester juju-deployer)
 
 # Create an alphabetical list of packages to remove.
-remove_packages=(aisleriot gnome-games-data gnome-mahjongg gnome-sudoku)
+remove_packages=(aisleriot gnome-mahjongg gnome-sudoku)
 
 read -p "Add the stable or devel Juju repository? " JUJU_REPOSITORY
 if [[ -z $JUJU_REPOSITORY ]]; then
@@ -83,13 +84,13 @@ for repository in "${repositories[@]}"; do
 done
 
 echo "Updating the apt package list with the repository changes."
-sudo apt-get -qq update 
+sudo apt-get update 
 
 echo "Removing the unwanted packages."
 sudo apt-get purge -y ${remove_packages[@]}
 
 echo "Installing extra packages."
-sudo apt-get install -y ${install_packages[@]}
+sudo apt-get install -y --force-yes ${install_packages[@]}
 
 echo "Installing python packages."
-sudo pip install ${pip_install[@]}
+sudo pip install -U ${pip_install[@]}

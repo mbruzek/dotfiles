@@ -25,6 +25,6 @@ if [ ! -d $HOME/workspace/bash ]; then
     mkdir -p $HOME/workspace/bash
 fi
 # Copy the bash scripts to the user's workspace/bash directory.
-cp ./workspace/bash/* $HOME/workspace/bash/
+cp -rv ./workspace/bash/* $HOME/workspace/bash/
 
 echo "The dotfiles repository has been set up successfully."
