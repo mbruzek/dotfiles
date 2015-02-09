@@ -94,3 +94,5 @@ sudo apt-get install -y --force-yes ${install_packages[@]}
 
 echo "Installing python packages."
 sudo pip install -U ${pip_install[@]}
+
+echo "${0} script complete."
