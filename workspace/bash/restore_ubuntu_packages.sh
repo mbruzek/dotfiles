@@ -27,9 +27,9 @@ sudo apt-get update
 # Install the Debian package tool dselect.
 sudo apt-get install -y dselect
 # Select all the packages found in the dpkg_selection file.
-sudo dpkg --set-selections < ${TARGET_DIRECTORY}/dpkg_selections
+sudo dpkg --set-selections --configure < ${TARGET_DIRECTORY}/dpkg_selections
 # Run the Debian package tool dselect.
-sudo dselect
+#sudo dselect
 
 echo "Restoring packages complete."
 

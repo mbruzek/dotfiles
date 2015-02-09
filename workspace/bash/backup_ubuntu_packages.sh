@@ -9,6 +9,9 @@ TARGET_DIRECTORY=workspace/resources/${ARCH}/${VERSION}
 if [ ! -d $TARGET_DIRECTORY ]; then
     mkdir -p $TARGET_DIRECTORY
 fi
+
+echo "Saving packages for ${ARCH} ${VERSION} requires sudo authority."
+
 # Save off the packages.
 dpkg --get-selections > ${TARGET_DIRECTORY}/dpkg_selections
 # Save off the apt repositories.
