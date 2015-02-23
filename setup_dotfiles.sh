@@ -21,10 +21,10 @@ fi
 # Copy the .vimrc to the users home file.
 cp .vimrc $HOME/.vimrc
 
-if [ ! -d $HOME/workspace/bash ]; then
-    mkdir -p $HOME/workspace/bash
+if [ ! -d $HOME/workspace ]; then
+    mkdir -p $HOME/workspace
 fi
-# Copy the bash scripts to the user's workspace/bash directory.
-cp -rv ./workspace/bash/* $HOME/workspace/bash/
+# Copy the bash scripts to the user's workspace directory.
+cp -rv ./workspace $HOME/
 
 echo "The dotfiles repository has been set up successfully."
