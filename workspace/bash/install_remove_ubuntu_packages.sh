@@ -7,7 +7,6 @@ set -x
 
 # Create an alphabetical list of packages to install.
 install_packages=(\
-#amulet \
 arj \
 build-essential \
 byobu \
@@ -15,7 +14,7 @@ bzr \
 cabextract \
 charm-tools \
 chromium-browser \
-docker.io \
+curl \
 enigmail \
 espeak \
 file-roller \
@@ -26,23 +25,29 @@ google-talkplugin \
 gufw \
 indicator-multiload \
 inkscape \
+ipython \
 ipython3 \
 juju-core \
 juju-local \
+keepassx \
 leafpad \
 lm-sensors \
-macchanger \
+lxc-docker \
+# macchanger \
 markdown \
 meld \
 mercurial \
 mpack \
 p7zip-full \
 p7zip-rar \
+pastebinit \
 python3 \
 python3-flake8 \
+python3-pip \
 python3-requests \
 python3-setuptools \
 python-dev \
+python-flake8 \
 python-pip \
 python-virtualenv \
 qemu-kvm \
@@ -51,6 +56,7 @@ rar \
 sharutils \
 ssh \
 synaptic \
+tree \
 ufw \
 unace \
 unrar \
@@ -64,7 +70,7 @@ zip \
 )
 
 # Create an alphabetical list of python packages to install.
-pip_install=(bundletester juju-deployer)
+pip_install=(path.py requests)
 
 # Create an alphabetical list of packages to remove.
 remove_packages=(aisleriot gnome-mahjongg gnome-sudoku)
