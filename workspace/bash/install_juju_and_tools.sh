@@ -12,6 +12,7 @@ charm-tools \
 git \
 juju-core \
 juju-local \
+juju-quickstart \
 )
 
 # Create an alphabetical list of python packages to install.
