@@ -38,6 +38,7 @@ markdown \
 meld \
 mercurial \
 mpack \
+network-manager-openvpn-gnome \
 p7zip-full \
 p7zip-rar \
 pastebinit \
