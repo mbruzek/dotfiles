@@ -7,6 +7,7 @@ set -x
 
 # Create an alphabetical list of packages to install.
 install_packages=(\
+ack-grep \
 arj \
 build-essential \
 byobu \
