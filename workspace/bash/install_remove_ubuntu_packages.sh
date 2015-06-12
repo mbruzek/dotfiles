@@ -33,7 +33,7 @@ juju-local \
 keepassx \
 leafpad \
 lm-sensors \
-lxc-docker \
+# lxc-docker \
 # macchanger \
 markdown \
 meld \
@@ -75,7 +75,29 @@ zip \
 pip_install=(path.py requests)
 
 # Create an alphabetical list of packages to remove.
-remove_packages=(aisleriot gnome-mahjongg gnome-sudoku)
+remove_packages=( \
+account-plugin-aim \
+account-plugin-facebook \
+account-plugin-flickr \
+account-plugin-google
+account-plugin-jabber \
+account-plugin-salut \
+account-plugin-windows-live \
+account-plugin-yahoo \
+aisleriot \
+gnome-mahjongg \
+gnome-sudoku \
+unity-scope-clementine \
+unity-scope-colourlovers \
+unity-scope-gmusicbrowser \
+unity-scope-guayadeque \
+unity-scope-musicstores \
+unity-scope-musique \
+unity-scope-texdoc \
+unity-scope-tomboy \
+unity-scope-yelp \
+unity-scope-zotero \
+)
 
 read -p "Add the stable or devel Juju repository? " JUJU_REPOSITORY
 if [[ -z $JUJU_REPOSITORY ]]; then
