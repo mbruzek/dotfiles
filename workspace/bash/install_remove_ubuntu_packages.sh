@@ -92,7 +92,7 @@ for repository in "${repositories[@]}"; do
 done
 
 echo "Updating the apt package list with the repository changes."
-sudo apt-get update 
+sudo apt-get update -qq
 
 echo "Removing the unwanted packages."
 sudo apt-get purge -y ${remove_packages[@]}

@@ -1,0 +1,7 @@
+# Go exports
+export GOPATH=$HOME/workspace/go
+export PATH=$PATH:$HOME/.juju-plugins:$GOPATH/bin
+# Juju exports
+export JUJU_REPOSITORY=$HOME/workspace/charms
+export LAYER_PATH=$HOME/workspace/layers
+export INTERFACE_PATH=$HOME/workspace/interfaces

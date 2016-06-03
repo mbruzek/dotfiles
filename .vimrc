@@ -1,5 +1,5 @@
-" 
-" Matt Bruzek's vim run command file (.vimrc)
+"
+" vim run command file (.vimrc)
 " Last updated on 01/23/2015
 "
 
@@ -17,4 +17,3 @@ set tabstop=8
 set autoindent
 " Set the background to dark.
 set background=dark
-
