@@ -33,5 +33,5 @@ directory.
 
 ## Please contribute!
 
-Please create a pull request if you have something useful or interesting
-to add.
+I am always looking to improve. Please create a pull request if you have 
+something useful or interesting to add.
