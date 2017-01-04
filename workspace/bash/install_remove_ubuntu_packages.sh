@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Install and remove packages on a 15.04 Ubuntu system.
-# This script was written on 02/02/2015.
+# Install and remove packages on a 16.10 Ubuntu system.
+# This script was updated on 01/04/2017.
 
 set -x
 
@@ -13,7 +13,6 @@ build-essential \
 byobu \
 bzr \
 cabextract \
-charm-tools \
 chromium-browser \
 curl \
 enigmail \
@@ -22,18 +21,16 @@ file-roller \
 flashplugin-installer \
 git \
 golang-go \
-google-talkplugin \
+# google-talkplugin \
 gufw \
 indicator-multiload \
 inkscape \
 ipython \
 ipython3 \
-juju-core \
-juju-local \
 keepassx \
 leafpad \
 lm-sensors \
-# lxc-docker \
+lxd \
 # macchanger \
 markdown \
 meld \
@@ -76,53 +73,33 @@ pip_install=(path.py requests)
 
 # Create an alphabetical list of packages to remove.
 remove_packages=( \
-account-plugin-aim \
 account-plugin-facebook \
 account-plugin-flickr \
-account-plugin-google
-account-plugin-jabber \
-account-plugin-salut \
-account-plugin-windows-live \
-account-plugin-yahoo \
+account-plugin-ubuntuone \
 aisleriot \
 gnome-mahjongg \
 gnome-sudoku \
-unity-scope-clementine \
+thunderbird \
 unity-scope-colourlovers \
-unity-scope-gmusicbrowser \
-unity-scope-guayadeque \
-unity-scope-musicstores \
-unity-scope-musique \
+unity-scope-gdrive \
 unity-scope-texdoc \
 unity-scope-tomboy \
 unity-scope-yelp \
 unity-scope-zotero \
 )
 
-read -p "Add the stable or devel Juju repository? " JUJU_REPOSITORY
-if [[ -z $JUJU_REPOSITORY ]]; then
-  JUJU_REPOSITORY="stable"
-# JUJU_REPOSITORY="devel"
-fi
-
-# Create a list of repositories to add.
-repositories=(ppa:juju/${JUJU_REPOSITORY} 'deb http://dl.google.com/linux/talkplugin/deb/ stable main')
-
-echo "Adding repositories to the system."
-for repository in "${repositories[@]}"; do
-  sudo add-apt-repository -y "${repository}"
-done
-
 echo "Updating the apt package list with the repository changes."
 sudo apt-get update -qq
-
-echo "Removing the unwanted packages."
-sudo apt-get purge -y ${remove_packages[@]}
 
 echo "Installing extra packages."
 sudo apt-get install -y --force-yes ${install_packages[@]}
 
 echo "Installing python packages."
 sudo pip install -U ${pip_install[@]}
+
+echo "Removing the unwanted packages."
+sudo apt-get purge -y ${remove_packages[@]}
+sudo apt-get autoremove
+sudo apt-get autoclean
 
 echo "${0} script complete."
