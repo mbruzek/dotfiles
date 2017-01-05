@@ -38,10 +38,10 @@ fi
 # Copy the bash scripts to the user's workspace directory.
 cp -rv ./workspace ${HOME}/
 
-mkdir -p ${HOME}/workspace/go/bin
-mkdir -p ${HOME}/workspace/bundles
-mkdir -p ${HOME}/workspace/charms
-mkdir -p ${HOME}/workspace/interfaces
-mkdir -p ${HOME}/workspace/layers
+mkdir -p -v ${HOME}/workspace/go/bin
+mkdir -p -v ${HOME}/workspace/bundles
+mkdir -p -v ${HOME}/workspace/charms
+mkdir -p -v ${HOME}/workspace/interfaces
+mkdir -p -v ${HOME}/workspace/layers
 
 echo "The dotfiles repository has been set up successfully."

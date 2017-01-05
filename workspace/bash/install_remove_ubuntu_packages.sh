@@ -98,7 +98,7 @@ echo "Installing python packages."
 sudo pip install -U ${pip_install[@]}
 
 echo "Removing the unwanted packages."
-sudo apt-get purge -y ${remove_packages[@]}
+sudo apt-get purge -y --force-yes ${remove_packages[@]}
 sudo apt-get autoremove
 sudo apt-get autoclean
 

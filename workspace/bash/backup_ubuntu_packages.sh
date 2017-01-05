@@ -4,10 +4,10 @@
 
 VERSION=`lsb_release -rs`
 ARCH=`uname -m`
-TARGET_DIRECTORY=workspace/resources/${ARCH}/${VERSION}
+TARGET_DIRECTORY=${1:-"${HOME}/workspace/resources/${ARCH}/${VERSION}"}
 
-if [ ! -d $TARGET_DIRECTORY ]; then
-    mkdir -p $TARGET_DIRECTORY
+if [ ! -d ${TARGET_DIRECTORY} ]; then
+    mkdir -p -v ${TARGET_DIRECTORY}
 fi
 
 echo "Saving packages for ${ARCH} ${VERSION} requires sudo authority."
