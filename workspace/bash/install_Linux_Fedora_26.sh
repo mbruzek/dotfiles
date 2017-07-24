@@ -5,11 +5,11 @@
 set -x 
 
 echo "Upgrading the packages on this system."
-sudo dnf -y upgrade
+sudo dnf -y check-update
 
 install_packages=(\
 byobu \
-chromium-browser \
+chromium \
 golang \
 keepassx \
 leafpad \
@@ -24,8 +24,8 @@ yubikey-personalization-gui \
 echo "Installing extra system packages."
 sudo dnf -y install ${install_packages[@]}
 
-sudo yum install https://prerelease.keybase.io/keybase_amd64.rpm
+sudo dnf -y install https://prerelease.keybase.io/keybase_amd64.rpm
 
 # Remove packages if needed.
 
-
+#sudo dnf -y remove thunderbird
