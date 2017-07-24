@@ -1,7 +1,3 @@
 # Go exports
 export GOPATH=${HOME}/workspace/go
 
-# Juju exports
-export JUJU_REPOSITORY=${HOME}/workspace/charms
-export LAYER_PATH=${HOME}/workspace/layers
-export INTERFACE_PATH=${HOME}/workspace/interfaces

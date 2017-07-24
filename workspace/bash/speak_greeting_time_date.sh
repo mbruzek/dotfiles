@@ -29,4 +29,4 @@ DATE_STRING=`date +"%l:%M %p, on %A %B %e, %Y"`
 # -s 145 Specify 145 words per minute, default is 160
 # -p 65 Pitch adjustment 0 to 99 default is 50
 # 2> redirects the error messages to /dev/null
-espeak -v en-us+f5 -s 145 -p 65 ". Good $TIME_OF_DAY it is $DATE_STRING" 2> /dev/null
+espeak -v en-us+f5 -s 155 -p 95 ". Good $TIME_OF_DAY it is $DATE_STRING" 2> /dev/null
