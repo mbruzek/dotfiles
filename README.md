@@ -4,43 +4,54 @@
 
 Updating the operating system or installing a new computer takes a long time
 to configure the system the way I like it. This repository is an attempt to
-automate the installation and configuration of the software on an Ubuntu
-Linux system to speed up the process as much as possible.
+automate the installation and configuration of the software of
+Linux systems to speed up the process as much as possible.
 
-## Install
+## Prerequisites
 
-From a fresh install of Ubuntu follow these steps:
+You will need to clone the repository to set up the dot files.
 
-Update the packages and resolve any errors:
+### The `git` command
+Install `git` so you can clone the repository:
+
 ```shell
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get install git
+```
+
+or
+
+```shell
+sudo dnf install git
 ```
 
 Then clone the dotfiles repository:
 
 ```shell
-sudo apt-get install git
-git clone https://github.com/mbruzek/dotfiles.git .dotfiles
-cd .dotfiles
+git clone https://github.com/mbruzek/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 ```
+## Setup
 
-To install the dot files into your home directory run:
+To install the dot files into your home directory run the setup command:
 
 ```shell
-./setup_dotfiles.sh
+./setup.sh
 ```
 
-From there run any one of the install scripts in the `~/workspace/bash/`
+The setup script will run a distribution specific install script to set up
+your system, or exit in error. If the release of the operation system has not
+been created yet you can copy from one of the previous releases.
+
+After that run any one of the other scripts in the `~/workspace/bash/`
 directory.
 
 ```shell
-~/workspace/bash/install_remove_ubuntu_packages.sh
+~/workspace/bash/pidgin_setup.sh
 ```
 
 ## Please contribute!
 
 Do you have a different way to automate a new Linux desktop? Do you have
 different patterns that are not covered here? Please contribute these
-ideas here! Create an issue or a pull request if you have something 
+ideas here! Create an issue or a pull request if you have something
 useful or interesting to add.
