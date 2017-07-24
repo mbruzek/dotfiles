@@ -9,7 +9,6 @@ set -x
 install_packages=(\
 ack-grep \
 arj \
-build-essential \
 byobu \
 bzr \
 cabextract \
@@ -17,7 +16,6 @@ chromium-browser \
 curl \
 enigmail \
 espeak \
-file-roller \
 flashplugin-installer \
 git \
 golang-go \
@@ -40,11 +38,8 @@ network-manager-openvpn-gnome \
 p7zip-full \
 p7zip-rar \
 pastebinit \
-python3 \
 python3-flake8 \
 python3-pip \
-python3-requests \
-python3-setuptools \
 python-dev \
 python-flake8 \
 python-pip \
@@ -56,16 +51,13 @@ sharutils \
 ssh \
 synaptic \
 tree \
-ufw \
 unace \
 unrar \
-unzip \
 uudeview \
 vim \
 vim-gnome \
 virt-manager \
 yubikey-personalization \
-zip \
 )
 
 # Create an alphabetical list of python packages to install.
