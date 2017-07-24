@@ -38,6 +38,7 @@ network-manager-openvpn-gnome \
 p7zip-full \
 p7zip-rar \
 pastebinit \
+pidgin \
 python3-flake8 \
 python3-pip \
 python-dev \
