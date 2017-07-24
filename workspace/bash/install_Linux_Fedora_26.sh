@@ -24,6 +24,8 @@ yubikey-personalization-gui \
 echo "Installing extra system packages."
 sudo dnf -y install ${install_packages[@]}
 
+sudo yum install https://prerelease.keybase.io/keybase_amd64.rpm
+
 # Remove packages if needed.
 
 
