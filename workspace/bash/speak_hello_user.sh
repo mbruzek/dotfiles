@@ -15,4 +15,4 @@ else
     # When the hour is greater than 18 it is evening.
     TIME_OF_DAY="evening,"
 fi
-espeak -v en-us+f5 -s 145 -p 65 "Hello $USER what can I do for you this $TIME_OF_DAY?"
+espeak -v en-us+f5 -s 155 -p 95 "Hello $USER what can I do for you this $TIME_OF_DAY?"
