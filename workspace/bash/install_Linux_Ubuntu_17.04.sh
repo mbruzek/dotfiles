@@ -19,7 +19,6 @@ espeak \
 flashplugin-installer \
 git \
 golang-go \
-# google-talkplugin \
 gufw \
 indicator-multiload \
 inkscape \
@@ -29,7 +28,6 @@ keepassx \
 leafpad \
 lm-sensors \
 lxd \
-# macchanger \
 markdown \
 meld \
 mercurial \
@@ -61,9 +59,6 @@ virt-manager \
 yubikey-personalization \
 )
 
-# Create an alphabetical list of python packages to install.
-pip_install=(path.py requests)
-
 # Create an alphabetical list of packages to remove.
 remove_packages=( \
 account-plugin-facebook \
@@ -87,12 +82,13 @@ sudo apt-get update -qq
 echo "Installing extra packages."
 sudo apt-get install -y --force-yes ${install_packages[@]}
 
-echo "Installing python packages."
-sudo pip install -U ${pip_install[@]}
-
 echo "Removing the unwanted packages."
 sudo apt-get purge -y --force-yes ${remove_packages[@]}
 sudo apt-get autoremove
 sudo apt-get autoclean
+
+echo "Installing Python packages found in ${HOME}/workspace/python/requirements.txt"
+pip install --user -r ${HOME}/workspace/python/requirements.txt
+pip3 install --user -r ${HOME}/workspace/python/requirements.txt
 
 echo "${0} script complete."
