@@ -14,7 +14,10 @@ if [ "$UNAME" == "Linux" ]; then
         RELEASE=$(lsb_release -r -s)
     else
         echo "The lsb_release utility was not found."
-        exit 1
+        echo "Checking /etc/os-release"
+        source /etc/os-release
+        ID=${NAME}
+        RELEASE=${VERSION_ID}
     fi
 else
     echo "Not a Linux system."
