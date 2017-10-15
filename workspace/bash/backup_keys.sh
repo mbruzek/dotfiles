@@ -31,6 +31,8 @@ for target in ${user_targets[@]}; do
     echo "'${directory}' does not exist."
   fi
 done
-cp -v -r --parents /etc/ssh ${base_directory}/${hostname}
-cp -v -r --parents /etc/ssl/private ${base_directory}/${hostname}
+# Copy the host ssh information over as well.
+cp -v -r --parents /etc/ssh ${output_directory}
+# Copy any private ssl certificates.
+cp -v -r --parents /etc/ssl/private ${output_directory}
 echo "Keys saved to '${output_directory}'"
