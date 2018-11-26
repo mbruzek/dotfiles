@@ -9,12 +9,14 @@ echo "Upgrading the packages on this system."
 sudo apt update -qq
 
 install_packages=(\
+ack \
 apt-transport-https \
 byobu \
 chromium \
 curl \
 espeak \
 golang-go \
+imvirt \
 iptables-persistent \
 keepassx \
 leafpad \
@@ -23,6 +25,7 @@ macchanger \
 meld \
 pastebinit \
 pidgin \
+pidgin-sipe \
 pigz \
 python-pip \
 python3-pip \
@@ -33,7 +36,9 @@ strace \
 sudo \
 svn \
 tree \
+ufw \
 virt-manager \
+virt-sparsify \
 zerofree \
 zip \
 )
