@@ -15,6 +15,7 @@ byobu \
 chromium \
 curl \
 espeak \
+gdb \
 golang-go \
 imvirt \
 iptables-persistent \
