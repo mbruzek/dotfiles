@@ -1,17 +1,26 @@
 # The dotfiles repository
 
-### Problem
+## Problem statement
 
-Updating the operating system or installing a new computer takes a long time
-to configure the system the way I like it. This repository is an attempt to
-automate the installation and configuration of the software of
-Linux systems to speed up the process as much as possible.
+As a software engineer I have to load a lot of Linux systems that process
+can take a long time to get the system the way I like to use it.
+
+## Solution
+
+This repository is an attempt to automate the installation and configuration
+of the software of Linux systems to speed up the process as much as possible.
 
 ## Prerequisites
 
-You will need to clone the repository to set up the dot files.
+This repository assumes you are using a Linux system and running a BASH shell.
+You must also have `git` installed to clone the repository.
+
+## Install
+
+Clone the repository and run setup to configure the system.
 
 ### The `git` command
+
 Install `git` so you can clone the repository:
 
 ```shell
@@ -30,6 +39,7 @@ Then clone the dotfiles repository:
 git clone https://github.com/mbruzek/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
+
 ## Setup
 
 To install the dot files into your home directory run the setup command:
@@ -51,7 +61,8 @@ directory.
 
 ## Please contribute!
 
-Do you have a different way to automate a new Linux desktop? Do you have
-different patterns that are not covered here? Please contribute these
-ideas here! Create an issue or a pull request if you have something
-useful or interesting to add.
+Do you have a different way to automate a new Linux desktop? Please let me
+know. Do you have different patterns that are not covered by this repository?
+Please contribute ideas [here](https://github.com/mbruzek/dotfiles/issues)! 
+Create an issue or a pull request if you have something useful or interesting
+to add.
