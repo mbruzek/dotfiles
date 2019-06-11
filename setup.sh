@@ -45,6 +45,6 @@ cp -rv ./workspace ${HOME}/
 
 # Run the install script for this distribution.
 echo "Running install script for ${UNAME}_${ID}_${RELEASE}"
-${HOME}/workspace/bash/install_${UNAME}_${ID}_${RELEASE}.sh
+bash ${HOME}/workspace/bash/install_${UNAME}_${ID}_${RELEASE}.sh
 
 echo "Setup complete for ${UNAME} ${ID} ${RELEASE} run any additional scripts as needed."
