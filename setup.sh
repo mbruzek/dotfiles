@@ -31,7 +31,7 @@ if [ $? -ne 0 ]; then
     echo -e HISTTIMEFORMAT=\"%F %r \" >> ${HOME}/.bashrc
 else
     # Replace the history time format in the user's .bashrc
-    sed -i -e 's/HISTTIMEFORMAT=.*&/HISTTIMEFORMAT=\"%F %r \"/' ${HOME}/.bashrc
+    sed -i -e 's|HISTTIMEFORMAT=.*|HISTTIMEFORMAT=\"%F %r \"|' ${HOME}/.bashrc
 fi
 
 cp -rv bash_aliases ${HOME}/.bash_aliases
