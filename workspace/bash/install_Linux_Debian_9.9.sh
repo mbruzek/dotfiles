@@ -59,7 +59,7 @@ gnome-games \
 # Remove packages if needed.
 echo "Removing unwanted packages."
 sudo apt purge -y --force-yes ${remove_packages[@]}
-sudo apt autoremove
+sudo apt autoremove -y
 sudo apt autoclean
 
 echo "Installing Python packages found in ${HOME}/workspace/python/requirements.txt"
