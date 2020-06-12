@@ -56,6 +56,7 @@ python3-pip \
 qemu-kvm \
 qemu-system \
 qemu-utils \
+ripgrep \
 samba \
 sdparm \
 ssh \
