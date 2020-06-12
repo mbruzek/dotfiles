@@ -50,8 +50,6 @@ parted \
 passwordsafe \
 pastebinit \
 pcscd \
-pidgin \
-pidgin-sipe \
 pigz \
 python3-pip \
 qemu-kvm \
