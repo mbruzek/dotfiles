@@ -42,6 +42,7 @@ lshw \
 macchanger \
 meld \
 neofetch \
+net-tools \
 ntp \
 ntpdate \
 nvidia-detect \
