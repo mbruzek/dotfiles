@@ -64,7 +64,7 @@ echo "Updating the apt package list with the repository changes."
 sudo apt update -qq
 
 echo "Installing extra packages."
-sudo apt install --allow ${install_packages[@]}
+sudo apt install -y ${install_packages[@]}
 
 echo "Removing the unwanted packages."
 sudo apt purge -y --allow-remove-essential ${remove_packages[@]}
